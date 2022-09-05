@@ -59,8 +59,8 @@ function App() {
         <CyberbugsTemplate exact path='/projectmanagement' Component={ProjectManagement} />
 
 
-        <UserLoginTemplate exact path='/' Component={LoginCyberBugs} />
-        <UserLoginTemplate path='*' Component={LoginCyberBugs} />
+        <HomeTemplate exact path='/' Component={LoginCyberBugs} />
+        <HomeTemplate path='*' Component={LoginCyberBugs} />
       </Switch>
 
     </>

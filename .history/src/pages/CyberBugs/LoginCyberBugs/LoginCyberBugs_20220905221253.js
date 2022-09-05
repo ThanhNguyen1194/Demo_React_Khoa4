@@ -6,7 +6,6 @@ import * as Yup from 'yup';
 import {connect} from 'react-redux';
 import { USER_SIGNIN_API } from '../../../redux/constants/Cyberbugs/Cyberbugs';
 import { singinCyberbugAction } from '../../../redux/actions/CyberBugsActions';
-import { history } from '../../../util/history';
  function LoginCyberBugs(props) {
 
     const {
@@ -69,8 +68,9 @@ const LoginCyberBugsWithFormik =  withFormik({
         // }
         // setSubmitting(true);
         props.dispatch(singinCyberbugAction(email,password));
-
         
+
+        history.push('/indexCyberBugs')
         // console.log(props)
         // console.log(values);
 

@@ -40,12 +40,12 @@ function App() {
       {/* <Header /> */}
       <LoadingComponent />
       <Switch>
-        <HomeTemplate exact path='/home' Component={Home} />
+        {/* <HomeTemplate exact path='/home' Component={Home} />
         <HomeTemplate exact path='/about' Component={About} />
         <HomeTemplate exact path='/contact' Component={Contact} />
         <HomeTemplate exact path='/Login' Component={Login} />
         <HomeTemplate exact path='/detail/:id' Component={Detail} />
-        <HomeTemplate exact path='/profile' Component={Profile} />
+        <HomeTemplate exact path='/profile' Component={Profile} /> */}
         <HomeTemplate exact path='/todolistRFC' Component={TodolistRFC} />
         <HomeTemplate exact path='/todolistRCC' Component={TodolistRCC} />
         <HomeTemplate exact path='/todolistRedux' Component={ToDoListRedux} />

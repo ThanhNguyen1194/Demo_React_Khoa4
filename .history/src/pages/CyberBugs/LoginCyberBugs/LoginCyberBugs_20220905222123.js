@@ -69,6 +69,7 @@ const LoginCyberBugsWithFormik =  withFormik({
         // }
         // setSubmitting(true);
         props.dispatch(singinCyberbugAction(email,password));
+        props.history.push('/cyberbugs')
 
         
         // console.log(props)

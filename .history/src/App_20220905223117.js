@@ -40,7 +40,7 @@ function App() {
       {/* <Header /> */}
       <LoadingComponent />
       <Switch>
-        <HomeTemplate exact path='/home' Component={Home} />
+        {/* <HomeTemplate exact path='/home' Component={Home} /> */}
         <HomeTemplate exact path='/about' Component={About} />
         <HomeTemplate exact path='/contact' Component={Contact} />
         <HomeTemplate exact path='/Login' Component={Login} />
