@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import ReactHtmlParser from "react-html-parser";
 import { GET_ALL_STATUS_SAGA } from '../../../redux/constants/Cyberbugs/StatusConstant';
 import { GET_ALL_PRIORITY_SAGA } from '../../../redux/constants/Cyberbugs/PriorityConstants';
-import { CHANGE_ASSIGNESS, CHANGE_TASK_MODAL, HANDLE_CHANGE_POST_API_SAGA, REMOVE_USER_ASSIGN, UPDATE_STATUS_TASK_SAGA } from '../../../redux/constants/Cyberbugs/TaskConstants';
+import { CHANGE_ASSIGNESS, CHANGE_TASK_MODAL, REMOVE_USER_ASSIGN, UPDATE_STATUS_TASK_SAGA } from '../../../redux/constants/Cyberbugs/TaskConstants';
 import { GET_ALL_TASK_TYPE_SAGA } from '../../../redux/constants/Cyberbugs/TaskTypeConstants';
 import { Editor } from '@tinymce/tinymce-react'
 import { Select } from 'antd';
@@ -61,8 +61,7 @@ export default function ModalCyberBugs(props) {
 
                 <button className="btn btn-primary m-2" onClick={() => {
                     dispatch({
-                        type:HANDLE_CHANGE_POST_API_SAGA,
-                        actionType:CHANGE_TASK_MODAL,
+                        type: CHANGE_TASK_MODAL,
                         name: 'description',
                         value: content
                     })
@@ -70,17 +69,10 @@ export default function ModalCyberBugs(props) {
                 }}>Save</button>
                 <button className="btn btn-primary m-2" onClick={() => {
                     dispatch({
-                        type:HANDLE_CHANGE_POST_API_SAGA,
-                        actionType:CHANGE_TASK_MODAL,
+                        type: CHANGE_TASK_MODAL,
                         name: 'description',
                         value: historyContent
                     })
-                   
-                //    dispatch({
-                //         type: CHANGE_TASK_MODAL,
-                //         name: 'description',
-                //         value: historyContent
-                //     })
                     setVisibleEditor(false)
                 }}>Close</button>
             </div> : <div onClick={() => {
@@ -96,22 +88,11 @@ export default function ModalCyberBugs(props) {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-
-
         dispatch({
-            type:HANDLE_CHANGE_POST_API_SAGA,
-            actionType:CHANGE_TASK_MODAL,
+            type: CHANGE_TASK_MODAL,
             name,
             value
         })
-        
-        // dispatch({
-        //     type: CHANGE_TASK_MODAL,
-        //     name,
-        //     value
-        // });
-
-        
     }
     const renderTimeTracking = () => {
 
@@ -129,7 +110,7 @@ export default function ModalCyberBugs(props) {
                         <div className="progress-bar" role="progressbar" style={{ width: `${percent}%` }} aria-valuenow={Number(timeTrackingSpent)} aria-valuemin={Number(timeTrackingRemaining)} aria-valuemax={max} />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <p className="logged">{Number(timeTrackingSpent)}h logged</p>
+                        <p className="logged">{Number(timeTrackingRemaining)}h logged</p>
                         <p className="estimate-time">{Number(timeTrackingRemaining)}h remaining</p>
                     </div>
                 </div>
@@ -139,10 +120,10 @@ export default function ModalCyberBugs(props) {
             <div className="row">
 
                 <div className="col-6">
-                    <input className="form-control" name="timeTrackingSpent"  onChange={handleChange} />
+                    <input className="form-control" name="timeTrackingSpent" onChange={handleChange} />
                 </div>
                 <div className="col-6">
-                    <input className="form-control" name="timeTrackingRemaining"  onChange={handleChange} />
+                    <input className="form-control" name="timeTrackingRemaining" onChange={handleChange} />
                 </div>
             </div>
         </div>
@@ -266,7 +247,7 @@ export default function ModalCyberBugs(props) {
                                         <h6>ASSIGNEES</h6>
                                         <div className="row">
                                             {
-                                                taskDetailModal.assigness?.map((user, index) => {
+                                                taskDetailModal.assigness.map((user, index) => {
                                                     return <div className="col-6  mt-2 mb-2">
                                                         <div key={index} style={{ display: 'flex' }} className="item">
 
@@ -277,17 +258,10 @@ export default function ModalCyberBugs(props) {
                                                             <p className="name mt-1 ml-1">
                                                                 {user.name}
                                                                 <i className="fa fa-times" style={{ marginLeft: 5,cursor:'pointer' }}  onClick={() => {
-                                                                    
                                                                     dispatch({
-                                                                        type:HANDLE_CHANGE_POST_API_SAGA,
-                                                                        actionType: REMOVE_USER_ASSIGN,
+                                                                        type:REMOVE_USER_ASSIGN,
                                                                         userId:user.id
                                                                     })
-                                                                    
-                                                                    // dispatch({
-                                                                    //     type:REMOVE_USER_ASSIGN,
-                                                                    //     userId:user.id
-                                                                    // })
                                                                 }}  />
                                                             </p>
                                                         </div>
@@ -318,18 +292,11 @@ export default function ModalCyberBugs(props) {
                                                         }
                                                         let userSelected = projectDetail.members.find(mem => mem.userId == value);
                                                         userSelected = { ...userSelected, id: userSelected.userId };
-
+                                                        //dispatchReducer
                                                         dispatch({
-                                                            type:HANDLE_CHANGE_POST_API_SAGA,
-                                                            actionType: CHANGE_ASSIGNESS,
+                                                            type: CHANGE_ASSIGNESS,
                                                             userSelected
                                                         })
-
-                                                        //dispatchReducer
-                                                        // dispatch({
-                                                        //     type: CHANGE_ASSIGNESS,
-                                                        //     userSelected
-                                                        // })
                                                     }}>
                                                     
                                                     

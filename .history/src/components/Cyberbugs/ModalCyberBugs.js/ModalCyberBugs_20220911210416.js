@@ -139,10 +139,10 @@ export default function ModalCyberBugs(props) {
             <div className="row">
 
                 <div className="col-6">
-                    <input className="form-control" name="timeTrackingSpent"  onChange={handleChange} />
+                    <input className="form-control" name="timeTrackingSpent" defaultValue="" onChange={handleChange} />
                 </div>
                 <div className="col-6">
-                    <input className="form-control" name="timeTrackingRemaining"  onChange={handleChange} />
+                    <input className="form-control" name="timeTrackingRemaining" defaultValue="" onChange={handleChange} />
                 </div>
             </div>
         </div>

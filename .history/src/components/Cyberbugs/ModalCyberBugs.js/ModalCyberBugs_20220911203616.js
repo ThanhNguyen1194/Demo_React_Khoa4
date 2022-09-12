@@ -129,7 +129,7 @@ export default function ModalCyberBugs(props) {
                         <div className="progress-bar" role="progressbar" style={{ width: `${percent}%` }} aria-valuenow={Number(timeTrackingSpent)} aria-valuemin={Number(timeTrackingRemaining)} aria-valuemax={max} />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <p className="logged">{Number(timeTrackingSpent)}h logged</p>
+                        <p className="logged">{Number(timeTrackingRemaining)}h logged</p>
                         <p className="estimate-time">{Number(timeTrackingRemaining)}h remaining</p>
                     </div>
                 </div>
@@ -139,10 +139,10 @@ export default function ModalCyberBugs(props) {
             <div className="row">
 
                 <div className="col-6">
-                    <input className="form-control" name="timeTrackingSpent"  onChange={handleChange} />
+                    <input className="form-control" name="timeTrackingSpent" onChange={handleChange} />
                 </div>
                 <div className="col-6">
-                    <input className="form-control" name="timeTrackingRemaining"  onChange={handleChange} />
+                    <input className="form-control" name="timeTrackingRemaining" onChange={handleChange} />
                 </div>
             </div>
         </div>

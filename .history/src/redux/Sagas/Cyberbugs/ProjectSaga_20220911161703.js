@@ -192,10 +192,10 @@ function* getProjectDetailSaga(action) {
         history.push('/projectmanagement');
     }
    
-    // yield put({
-    //     type: HIDE_LOADING
-    // })
-}
+//     yield put({
+//         type: HIDE_LOADING
+//     })
+// }
 
 export function* theoDoiGetProjectDetail() {
     yield takeLatest('GET_PROJECT_DETAIL', getProjectDetailSaga);
