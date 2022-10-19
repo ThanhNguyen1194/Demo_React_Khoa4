@@ -203,7 +203,7 @@ function* signUpUserSaga(action) {
         const { data, status } = yield call(() => userService.signUpUser(userDetails));
 
         if (status === STATUS_CODE.SUCCESS) {
-            notifiFunction('success', 'Create user successfully !')
+            notifiFunction('success', 'Sign Up successfully !')
         }
 
         yield put({

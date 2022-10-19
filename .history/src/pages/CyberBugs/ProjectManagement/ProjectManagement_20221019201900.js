@@ -108,6 +108,7 @@ export default function ProjectManagement(props) {
         },
         {
             title: 'creator',
+            // dataIndex: 'creator',
             key: 'creator',
             render: (text, record, index) => {
                 return <Tag color="green">{record.creator?.name}</Tag>

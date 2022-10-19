@@ -380,7 +380,7 @@ export default function ModalCyberBugs(props) {
                                                             </div>
                                                             <p className="name mt-1 ml-1">
                                                                 {user.name}
-                                                                <i className="fa fa-times text-danger" style={{ marginLeft: 5, cursor: 'pointer' }} onClick={() => {
+                                                                <i className="fa fa-times" style={{ marginLeft: 5, cursor: 'pointer' }} onClick={() => {
 
                                                                     dispatch({
                                                                         type: HANDLE_CHANGE_POST_API_SAGA,

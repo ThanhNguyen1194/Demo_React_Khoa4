@@ -88,8 +88,8 @@
 /* Menu */
 .menu {
   height: 100vh;
-  width: 18%;
-  margin-left: 0%;
+  width: 22%;
+  margin-left: 1%;
   background-color: #f4f5f7;
 }
 
@@ -401,7 +401,7 @@
 }
 
 .item {
-  margin-right: 0px;
+  margin-right: 20px;
   background: #e9eaf0;
   padding: 5px;
   border-radius: 5px;

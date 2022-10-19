@@ -14,6 +14,7 @@ function* createTaskSaga(action) {
 
         //Gọi api thành công thì dispatch lên reducer thông qua put
         if (status === STATUS_CODE.SUCCESS) {
+            console.log(data)
 
         }
         yield put({

@@ -14,6 +14,7 @@ function* createTaskSaga(action) {
 
         //Gọi api thành công thì dispatch lên reducer thông qua put
         if (status === STATUS_CODE.SUCCESS) {
+            console.log(data)
 
         }
         yield put({
@@ -157,6 +158,7 @@ export function* handelChangePostApi(action) {
     //Save qua api updateTaskSaga
     //Lây dữ liệu từ state.taskDetailModal 
     let { taskDetailModal } = yield select(state => state.TaskReducer);
+    // console.log('taskDetailModal sau khi thay đổi', taskDetailModal)
     //Biến đổi dữ liệu state.taskDetailModal thành dữ liệu api cần
 
     const listUserAsign = taskDetailModal.assigness?.map((user, index) => {

@@ -9,6 +9,7 @@ import { GET_ALL_PROJECT, GET_ALL_PROJECT_SAGA } from "../../constants/Cyberbugs
 import { GET_USER_BY_PROJECT_ID_SAGA } from "../../constants/Cyberbugs/UserConstatnts";
 function* createProjectSaga(action) {
 
+    console.log('actionCreateProject',action)
     //HIỂN THỊ LOADING
     yield put({
         type: DISPLAY_LOADING
@@ -21,6 +22,7 @@ function* createProjectSaga(action) {
         const { data, status } = yield call(() => cyberbugsService.createProjectAuthorization(action.newProject));
         //Gọi api thành công thì dispatch lên reducer thông qua put
         if (status === STATUS_CODE.SUCCESS) {
+            console.log(data)
 
             history.push('/projectmanagement');
         }
@@ -133,6 +135,7 @@ function* deleteProjectSaga(action) {
         const { data, status } = yield call(() => projectService.deleteProject(action.idProject));
         //Gọi api thành công thì dispatch lên reducer thông qua put
         if (status === STATUS_CODE.SUCCESS) {
+            console.log(data)
 
             notifiFunction('success','Delete project successfully !')
 
