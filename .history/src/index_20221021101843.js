@@ -8,7 +8,7 @@ import 'antd/dist/antd.min.css'
 //setup reducer
 import store from './redux/configStore';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
+import { BrowserRouter, Router } from 'react-router-dom';
 import { history } from './util/history'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

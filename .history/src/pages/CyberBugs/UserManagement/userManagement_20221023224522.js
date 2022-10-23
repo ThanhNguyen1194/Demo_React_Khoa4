@@ -150,15 +150,15 @@ export default function UserManagement(props) {
                     <img src={userLogin.avatar} style={{ width: '50px', height: '50px', borderRadius: '50%', marginLeft: '20px', marginRight: '10px' }} alt="User Management" />
 
                     {/* <div style={{ position: 'absolute', bottom: -65, right: -30, height: 80, display: `${state.show}`, alignItems: "end", }}> */}
-                    <Popover placement="bottom" title={""}
-                        content={
-                            <Button type="primary" style={{ fontSize: 18, transition: "all 0.5s" }} onClick={() => {
-                                localStorage.removeItem('USER_LOGIN')
-                                localStorage.removeItem('ACCESS_TOKEN')
-                                history.push("/LoginCyberBugs")
-                            }}>Đăng xuất</Button>
+                    <Popover placement="bottom" title={"654"}
+                        content={"123456"
+                            // <Button type="primary" style={{ fontSize: 18, transition: "all 0.5s" }} onClick={() => {
+                            //     localStorage.removeItem('USER_LOGIN')
+                            //     localStorage.removeItem('ACCESS_TOKEN')
+                            //     history.push("/LoginCyberBugs")
+                            // }}>Đăng xuất</Button>
                         }
-                        trigger="click">
+                        trigger="click"><button>demo</button>
                         <i style={{ cursor: "pointer" }} onClick={() => {
                             // if (state.show === "none") {
 
@@ -168,7 +168,7 @@ export default function UserManagement(props) {
 
                             // }
                         }
-                        }><CaretDownOutlined style={{ fontSize: '50px' }} /></i>
+                        }><CaretDownOutlined style={{ fontSize: '50px' }} /></i>132
                     </Popover>
 
                     {/* </div> */}

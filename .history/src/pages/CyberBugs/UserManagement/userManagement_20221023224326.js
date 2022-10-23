@@ -149,29 +149,29 @@ export default function UserManagement(props) {
                     <p style={{ marginBottom: '0' }}>Chào !, {userLogin.name} </p>
                     <img src={userLogin.avatar} style={{ width: '50px', height: '50px', borderRadius: '50%', marginLeft: '20px', marginRight: '10px' }} alt="User Management" />
 
-                    {/* <div style={{ position: 'absolute', bottom: -65, right: -30, height: 80, display: `${state.show}`, alignItems: "end", }}> */}
-                    <Popover placement="bottom" title={""}
-                        content={
-                            <Button type="primary" style={{ fontSize: 18, transition: "all 0.5s" }} onClick={() => {
-                                localStorage.removeItem('USER_LOGIN')
-                                localStorage.removeItem('ACCESS_TOKEN')
-                                history.push("/LoginCyberBugs")
-                            }}>Đăng xuất</Button>
-                        }
-                        trigger="click">
-                        <i style={{ cursor: "pointer" }} onClick={() => {
-                            // if (state.show === "none") {
+                    <div style={{ position: 'absolute', bottom: -65, right: -30, height: 80, display: `${state.show}`, alignItems: "end", }}>
+                        <Popover placement="bottom" title={""}
+                            content={
+                                <Button type="primary" style={{ fontSize: 18, transition: "all 0.5s" }} onClick={() => {
+                                    localStorage.removeItem('USER_LOGIN')
+                                    localStorage.removeItem('ACCESS_TOKEN')
+                                    history.push("/LoginCyberBugs")
+                                }}>Đăng xuất</Button>
+                            }
+                            trigger="click">
+                            <i style={{ cursor: "pointer" }} onClick={() => {
+                                // if (state.show === "none") {
 
-                            //     setState({ show: "flex" })
-                            // } else {
-                            //     setState({ show: "none" })
+                                //     setState({ show: "flex" })
+                                // } else {
+                                //     setState({ show: "none" })
 
-                            // }
-                        }
-                        }><CaretDownOutlined style={{ fontSize: '50px' }} /></i>
-                    </Popover>
+                                // }
+                            }
+                            }><CaretDownOutlined style={{ fontSize: '50px' }} /></i>132
+                        </Popover>
 
-                    {/* </div> */}
+                    </div>
                 </div>
             </div>
             <div className="mb-3 font-weight-bold" style={{ fontSize: 20, width: '150px' }} onClick={() => {

@@ -46,7 +46,7 @@ function App() {
       <DrawerCyberBugs />
       {/* <Header /> */}
       <LoadingComponent />
-      <Switch >
+      <Switch history={history}>
         <HomeTemplate exact path='/home' Component={Home} />
         <HomeTemplate exact path='/about' Component={About} />
 

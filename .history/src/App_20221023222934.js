@@ -27,9 +27,7 @@ import DemoDragDrop from './pages/DemoDragDrop/DemoDragDrop';
 import DragAndDropDnD from './pages/DragAndDropDnD/DragAndDropDnD';
 import signUpCyberBug from './pages/CyberBugs/SignUpCyberBug/signUpCyberBug';
 import userManagement from './pages/CyberBugs/UserManagement/userManagement';
-import { createBrowserHistory } from 'history';
 
-export const history = createBrowserHistory();
 function App() {
 
   // const history = useHistory();
@@ -38,7 +36,7 @@ function App() {
   //   dispatch({ type: 'ADD_HISTORY', history: history });
   // }, [])
 
-
+  export const history = createBrowserHistory();
 
   return (
     <>
@@ -46,7 +44,7 @@ function App() {
       <DrawerCyberBugs />
       {/* <Header /> */}
       <LoadingComponent />
-      <Switch >
+      <Switch>
         <HomeTemplate exact path='/home' Component={Home} />
         <HomeTemplate exact path='/about' Component={About} />
 
