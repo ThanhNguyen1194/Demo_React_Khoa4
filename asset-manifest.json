@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Jira_Clone/static/css/main.b66af81c.css",
-    "main.js": "/Jira_Clone/static/js/main.a4d6b760.js",
+    "main.css": "/Jira_Clone/static/css/main.7959e81d.css",
+    "main.js": "/Jira_Clone/static/js/main.4cdde646.js",
     "static/js/787.c0886f85.chunk.js": "/Jira_Clone/static/js/787.c0886f85.chunk.js",
     "static/media/bg.png": "/Jira_Clone/static/media/bg.dfa778261c3f9abc98e1.png",
     "static/media/loading.gif": "/Jira_Clone/static/media/loading.5e01ee7931d3de11d2ef.gif",
     "static/media/download.jfif": "/Jira_Clone/static/media/download.ef0b58c72b10cde41e26.jfif",
     "index.html": "/Jira_Clone/index.html",
-    "main.b66af81c.css.map": "/Jira_Clone/static/css/main.b66af81c.css.map",
-    "main.a4d6b760.js.map": "/Jira_Clone/static/js/main.a4d6b760.js.map",
+    "main.7959e81d.css.map": "/Jira_Clone/static/css/main.7959e81d.css.map",
+    "main.4cdde646.js.map": "/Jira_Clone/static/js/main.4cdde646.js.map",
     "787.c0886f85.chunk.js.map": "/Jira_Clone/static/js/787.c0886f85.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b66af81c.css",
-    "static/js/main.a4d6b760.js"
+    "static/css/main.7959e81d.css",
+    "static/js/main.4cdde646.js"
   ]
 }
