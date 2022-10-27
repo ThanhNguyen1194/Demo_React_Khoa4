@@ -28,7 +28,7 @@ export default function SidebarCyberbugs() {
         });
     };
     return (
-        <div>
+        <div style={{height:"100%"}}>
 
             <Sider trigger={null} collapsible collapsed={state.collapsed} style={{ height: '100%' }}>
                 <div className="text-right pr-2" onClick={toggle} ><BarsOutlined style={{ cursor: 'pointer', color: '#fff', fontSize: 25 }} /></div>

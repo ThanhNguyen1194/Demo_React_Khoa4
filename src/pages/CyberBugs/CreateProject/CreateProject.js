@@ -30,7 +30,7 @@ function CreateProject(props) {
 
 
     return (
-        <div className="container m-5">
+        <div className="container m-5" style={{width:"80%"}}>
             <h3>CreateProject</h3>
             <form className="container" onSubmit={handleSubmit} onChange={handleChange}>
                 <div className="form-group">
@@ -46,7 +46,7 @@ function CreateProject(props) {
                         init={{
                             selector: 'textarea#myTextArea',
 
-                            height: 500,
+                            height: 300,
                             menubar: false,
                             plugins: [
                                 'advlist autolink lists link image charmap print preview anchor',

@@ -141,7 +141,7 @@ export default function UserManagement(props) {
         }
     ]
     return (
-        <div className="container-fluid m-5">
+        <div className="container-fluid m-3" style={{width:"80%"}}>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', }}>
                 <h3>User Management</h3>
@@ -186,7 +186,7 @@ export default function UserManagement(props) {
                 <p style={{ textDecoration: 'underline', color: 'blue', cursor: 'pointer' }}>Create User +  </p>
 
             </div>
-            <div className='mb-4'>
+            <div className='mb-2'>
                 <Input placeholder="Search ..." style={{ width: '20%' }} onChange={(e) => {
                     setKeyword(e.target.value);
                 }} />
@@ -201,7 +201,7 @@ export default function UserManagement(props) {
                 </Button>
             </div>
 
-            <Table columns={columns} rowKey={"id"} dataSource={listUser} onChange={handleChange} />
+            <Table columns={columns} rowKey={"id"} dataSource={listUser} onChange={handleChange} pagination={{ defaultPageSize: 7, showSizeChanger: true, pageSizeOptions: ['10', '20', '30']}}/>
         </div >
     )
 }

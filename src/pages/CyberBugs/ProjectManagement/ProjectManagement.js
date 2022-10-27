@@ -261,14 +261,15 @@ export default function ProjectManagement(props) {
         }
     ];
     return (
-        <div className="container-fluid m-5">
+        <div className="container-fluid m-3" style={{width:"80%"}}>
             <h3>Project management</h3>
-            <Space style={{ marginBottom: 16 }}>
+            {/* <Space style={{ marginBottom: 16 }}>
                 <Button onClick={setAgeSort}>Sort age</Button>
                 <Button onClick={clearFilters}>Clear filters</Button>
                 <Button onClick={clearAll}>Clear filters and sorters</Button>
-            </Space>
-            <Table columns={columns} rowKey={"id"} dataSource={projectList} onChange={handleChange} />
+            </Space> */}
+            <Table columns={columns} rowKey={"id"} dataSource={projectList} onChange={handleChange} pagination={{ defaultPageSize: 8, showSizeChanger: true, pageSizeOptions: ['10', '20', '30']}}
+     />  
         </div>
     )
 }
